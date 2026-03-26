@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="main-card">
+            <h1 class="page-title">Famous Quotes</h1>
+
+            <nav class="mb-4">
+                <a href="/" class="btn btn-outline-primary">Home</a>
+            </nav>
+
+            <% for (let i of rows) { %>
+                <div class="quote-card">
+                    <p class="quote-text">"<%= i.quote %>"</p>
+                    <p class="quote-author">- <%= i.firstName %> <%= i.lastName %></p>
+                </div>
+            <% } %>
+
+            <footer>
+                <%- include("partials/footer.ejs") %>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

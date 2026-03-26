@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #313334;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-wrap {
+    max-width: 780px;
+    margin: 50px auto;
+}
+
+.main-card {
+    background-color: grey;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.search-form {
+    margin-bottom: 25px;
+}
+
+.quote-card {
+    margin: 18px 0;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.quote-text {
+    font-size: 19px;
+}
+
+.quote-author {
+    color: #000000;
+}

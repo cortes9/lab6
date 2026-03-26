@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head.ejs") %>
+
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="main-card">
+            <h1 class="page-title">Quote Finder</h1>
+
+            <div>
+                <form action="searchByKeyword" method="GET" class="search-form">
+                    <label class="form-label-text">Search by Keyword</label>
+                    <input type="text" name="keyword" class="form-control mb-3" placeholder="Enter a keyword">
+                    <button class="btn btn-primary">Search by Keyword</button>
+                </form>
+            </div>
+
+            <form action="searchByAuthor" method="GET" class="search-form">
+                <label class="form-label-text">Search by Author</label>
+                <select name="authorId" class="form-select mb-3">
+                    <% for (let i of authors) { %>
+                        <option value="<%= i.authorId %>">
+                            <%= i.firstName %> <%= i.lastName %>
+                        </option>
+                    <% } %>
+                </select>
+                <button class="btn btn-primary">Search by Author</button>
+            </form>
+
+            <footer>
+                <%- include("partials/footer.ejs") %>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
